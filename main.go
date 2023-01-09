@@ -10,7 +10,7 @@ import (
 	"time"
 )
  
-type MongoInstance sttruct {
+type MongoInstance struct {
 	Client *mongo.Client
 	Db  *mongo.Database
 }
@@ -20,7 +20,7 @@ var mg MongoInstance
 const dbName="fiber-hrms"
 const monogURI="mongodb://localhost:27017"+dbName
 
-type Employee sttruct {
+type Employee struct {
 	ID  	string  `json:"id" bson:"_id, omitempty"`
 	Name 	string  `json:"name"`
 	Salary 	float64  `json:"salary"`
